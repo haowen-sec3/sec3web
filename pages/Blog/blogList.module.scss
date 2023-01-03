@@ -1,0 +1,59 @@
+.blogs {
+  position: relative;
+  padding: 9.25rem 4rem 2rem;
+  width: 100%;
+  min-height: 100vh;
+  background-color: #0c0e23;
+  background-image: url("../../assets/images/bg.jpeg");
+  background-position: 50% 0%;
+  background-size: cover;
+  overflow-x: hidden;
+
+  .title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+
+  .bg-detail {
+    position: absolute;
+    left: -12rem;
+    top: -16rem;
+    right: auto;
+    bottom: auto;
+    z-index: 5;
+    width: 45.3125rem;
+    height: 31.8125rem;
+    opacity: 1;
+    mix-blend-mode: color-dodge;
+  }
+  .bg-list {
+    position: absolute;
+    top: 16rem;
+    right: -4%;
+    bottom: 0%;
+    z-index: 0;
+    width: 40.6875rem;
+    height: 28.5625rem;
+    mix-blend-mode: color-dodge;
+  }
+
+  .list {
+    z-index: 10;
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 4.8rem 2rem 2.8rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    padding: 3rem 1rem;
+    .title {
+      padding-top: 4rem;
+      font-size: 1.2rem;
+    }
+  }
+}

@@ -1,0 +1,288 @@
+@use "../../styles/globals.scss";
+
+.header {
+  position: fixed;
+  top: 2.2rem;
+  left: 0;
+  width: 100%;
+  height: 60px;
+  background-image: linear-gradient(
+    180deg,
+    rgba(25, 30, 82, 0.6) 17%,
+    rgba(23, 28, 80, 0)
+  );
+  z-index: 99;
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    // margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    width: calc(100% - 2rem);
+    height: 46px;
+    max-width: 90rem;
+  }
+
+  .brand {
+    position: relative;
+    float: left;
+    display: flex;
+    align-items: center;
+
+    img {
+      display: inline-block;
+      max-width: 100%;
+      height: 2.25rem;
+      vertical-align: middle;
+    }
+  }
+
+  .nav-menu {
+    position: relative;
+    float: right;
+    display: flex;
+    width: 100%;
+    padding-top: 1.5em;
+    padding-bottom: 1.5em;
+    justify-content: flex-end;
+    align-items: center;
+
+    .navlink {
+      position: relative;
+      display: inline-block;
+      vertical-align: top;
+      margin-right: 1.5rem;
+      margin-left: 1.5rem;
+      padding: 0rem;
+      font-size: 1rem;
+      color: #fff;
+      text-align: left;
+      text-decoration: none;
+      transition: all 200ms ease;
+
+      &:hover {
+        color: #d0e6ff;
+      }
+    }
+
+    .wrapper-navbar-buttom {
+      display: flex;
+      flex-wrap: wrap;
+      grid-column-gap: 0.75rem;
+      grid-row-gap: 0.75rem;
+
+      .outline-button {
+        overflow: visible;
+        margin-left: 1rem;
+
+        .button {
+          max-height: 45px;
+          min-height: 45px;
+          margin-left: 0rem;
+          padding: 0.5rem 2rem;
+          overflow: visible;
+          @extend .flex-row;
+          @extend .flex-center;
+          border: 0.125rem solid #d0e6ff;
+          border-radius: 12rem;
+          background-image: none;
+          outline-color: #d0e6ff;
+          outline-offset: 0px;
+          outline-style: none;
+          outline-width: 0.125rem;
+          cursor: pointer;
+
+          div {
+            margin-bottom: 0px;
+            font-family: "Avenir next", sans-serif;
+            font-size: 1rem;
+            font-weight: bolder;
+            line-height: 1.5;
+            color: #d0e6ff;
+          }
+
+          &:hover {
+            background-color: #d0e6ff;
+            box-shadow: 0 10px 30px 0 rgb(208 230 255 / 20%);
+            color: #171c50;
+          }
+        }
+      }
+
+      .outline-button2 {
+        position: relative;
+        display: flex;
+        max-height: 45px;
+        min-height: 45px;
+        align-items: center;
+        overflow: hidden;
+        padding: 0.5rem 2rem;
+        border-radius: 10rem;
+        background-color: transparent;
+        background-image: linear-gradient(280deg, #5c12d4 8%, #356eff 53%);
+        transition: all 200ms ease;
+        color: #fff;
+        text-decoration: none;
+
+        &:hover {
+          background-image: linear-gradient(261deg, #5c12d4 16%, #35ffe7);
+          box-shadow: 0 10px 30px 0 rgb(208 230 255 / 20%);
+          transform: translate(0px, -4px);
+        }
+
+        .button {
+          z-index: 1;
+        }
+
+        .bg-button {
+          position: absolute;
+          left: 0%;
+          top: 0%;
+          right: 0%;
+          bottom: 0%;
+          z-index: 0;
+          border-radius: 12rem;
+          background-image: linear-gradient(207deg, #5c12d4 27%, #35ffe7);
+        }
+        .bg-button2 {
+          transition: 0.3s;
+          position: absolute;
+          left: 0%;
+          top: 0%;
+          right: 0%;
+          bottom: 0%;
+          border-radius: 12rem;
+          background-image: linear-gradient(219deg, #5c12d4, #356eff 53%);
+          background: linear-gradient(214deg, #5c12d4, #356eff);
+          background-size: 400% 400%;
+          animation: gradientbg2 4s ease infinite;
+        }
+        @keyframes gradientbg2 {
+          0% {
+            background-position: 90% 0%;
+          }
+          50% {
+            background-position: 11% 100%;
+          }
+          100% {
+            background-position: 90% 0%;
+          }
+        }
+      }
+    }
+  }
+
+  .nav-button {
+    position: relative;
+    float: right;
+    padding: 18px 0 18px 18px;
+    font-size: 24px;
+    display: none;
+    cursor: pointer;
+    user-select: none;
+    z-index: 10;
+
+    .w-icon-nav-menu {
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+    }
+  }
+
+  .nav-overlay {
+    position: absolute;
+    display: block;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    top: 100%;
+    left: 0;
+    right: 0;
+
+    .nav {
+      transform: translateY(0px) translateX(0px);
+      transition: transform 400ms ease 0s;
+    }
+  }
+
+  @media screen and (max-width: 991px) {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    .brand {
+      margin-left: 1rem;
+      z-index: 10;
+
+      img {
+        width: fit-content;
+      }
+    }
+    .nav-button {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: transparent;
+    }
+    .nav-menu {
+      display: none;
+    }
+    .nav-overlay {
+      .nav-menu {
+        position: fixed;
+        left: 0%;
+        top: 0%;
+        right: 0%;
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        padding-top: 1.5em;
+        padding-bottom: 1.5em;
+        justify-content: flex-end;
+        align-items: flex-start;
+
+        bottom: auto;
+        padding: 7rem 1rem 2rem;
+        grid-row-gap: 0rem;
+        background-color: #171c50;
+
+        .navlink {
+          display: block;
+          margin-left: 1.5rem;
+          margin-right: 1.5rem;
+          padding-top: 0.8rem;
+          padding-bottom: 0.8rem;
+          width: 100%;
+          transition: all 200ms ease;
+          color: #fff;
+          font-size: 1rem;
+          text-decoration: none;
+        }
+
+        .wrapper-navbar-buttom {
+          margin-top: 1rem;
+          width: 100%;
+
+          .outline-button,
+          .outline-button2 {
+            margin-left: 1rem;
+            width: 100%;
+            text-align: center;
+
+            .button {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    top: 3rem;
+  }
+}

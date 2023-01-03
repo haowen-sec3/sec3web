@@ -1,0 +1,14 @@
+.container {
+  max-width: 1170px;
+  margin: 0 auto;
+  padding: 2rem 4rem;
+
+  @media screen and (max-width: 767px) {
+    padding: 4.8rem 2rem 2.8rem;
+  }
+
+  @media screen and (max-width: 479px) {
+    padding: 3rem 1rem;
+    text-align: left;
+  }
+}

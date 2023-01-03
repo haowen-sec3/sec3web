@@ -1,0 +1,59 @@
+.btn-with-arrow {
+  display: flex;
+  flex-wrap: wrap;
+  width: fit-content;
+  z-index: 2;
+
+  a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0.5rem 2rem;
+    min-height: 60px;
+    outline-color: #d0e6ff;
+    outline-offset: 0px;
+    outline-style: none;
+    outline-width: 0.125rem;
+    line-height: 1.7;
+    text-decoration: none;
+    color: #d0e6ff;
+    border: 0.125rem solid #d0e6ff;
+    border-radius: 12rem;
+    background-image: none;
+    outline-color: #d0e6ff;
+    outline-offset: 0px;
+    outline-style: none;
+    outline-width: 0.125rem;
+    overflow: hidden;
+
+    div {
+      padding-top: 0px;
+      font-size: 1rem;
+      color: #d0e6ff;
+      font-weight: 500;
+      text-align: left;
+    }
+
+    svg {
+      transition: 0.3s;
+      width: 1.25rem;
+      height: 1.4rem;
+      margin-left: 1rem;
+      flex: 0 0 auto;
+      color: #d0e6ff;
+      line-height: 1;
+    }
+
+    &:hover {
+      background-color: #d0e6ff;
+
+      div {
+        color: #333;
+      }
+      svg {
+        color: #333;
+        transform: translate(5px, 0);
+      }
+    }
+  }
+}

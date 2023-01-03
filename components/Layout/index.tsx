@@ -1,14 +1,16 @@
-import React, { ReactComponentElement } from "react";
+import React from "react";
 import Header from "../Header";
+import styles from "./layout.module.scss";
 
-type Layout = {
+type props = {
   children: React.ReactNode;
+  className?: string;
+  bg: "bg" | "no-bg";
 };
 
-const Layout = ({ children }: Layout) => {
+const Layout = ({ children, className, bg }: props) => {
   return (
-    <div>
-      <Header />
+    <div className={`${styles.layout} ${className} ${styles[bg]}`}>
       {children}
     </div>
   );
