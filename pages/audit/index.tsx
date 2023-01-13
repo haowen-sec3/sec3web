@@ -49,7 +49,6 @@ const Audit = () => {
   );
 
   const scrollToAnchor = (anchorName: string) => {
-    debugger;
     if (anchorName) {
       let anchorElement = document.getElementById(anchorName);
       if (anchorElement) {
