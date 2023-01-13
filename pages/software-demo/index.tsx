@@ -45,7 +45,7 @@ function Demo() {
         "sec-ch-ua-mobile": "?1",
         "sec-ch-ua-platform": '"Android"',
       },
-      body: {
+      body: JSON.stringify({
         name: "Full+Audit+Request",
         source: "https%3A%2F%2Fwww.sec3.dev%2Faudit%23audit",
         test: "false",
@@ -57,7 +57,7 @@ function Demo() {
         "fields%5BCompany%5D": state.company,
         "fields%5BAdditional+Information%5D": state.info,
         dolphin: "false",
-      },
+      }),
     })
       .then((response) => {
         console.log(response);
