@@ -24,48 +24,48 @@ function Demo() {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    fetch("https://webflow.com/api/v1/form/6273ba6b55681ae927cb4388", {
-      method: "POST",
-      headers: {
-        cookie:
-          "wf_exp_uniqueId=bbd782c7-52c8-42cc-a84d-1c891f876ad9; wf_logout=1672587886137; wfsession=B5dffEF3IdIKHWLTRggAaA.0BmnEeg21bcayv2PeiSZSEgpaV68RSfqWO2y033f_3EzOyUXpqrc4g9XyYTPkeVSCraPIC7i56lGxxqOGzdvDQ.1672587886137.86400000.8e1G1pyGxZ6jAmrz5nOYC213ZZqqQaKczct_ZjYQ3kQ",
-        Accept: "application/json, text/javascript, */*; q=0.01",
-        "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
-        Connection: "keep-alive",
-        "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
-        Origin: "https://www.sec3.dev",
-        Referer: "https://www.sec3.dev/",
-        "Sec-Fetch-Dest": "empty",
-        "Sec-Fetch-Mode": "cors",
-        "Sec-Fetch-Site": "cross-site",
-        "User-Agent":
-          "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36",
-        "sec-ch-ua":
-          '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
-        "sec-ch-ua-mobile": "?1",
-        "sec-ch-ua-platform": '"Android"',
-      },
-      body: JSON.stringify({
-        name: "Full+Audit+Request",
-        source: "https%3A%2F%2Fwww.sec3.dev%2Faudit%23audit",
-        test: "false",
-        "fields%5BFirst+Name%5D": state.firstName,
-        "fields%5BLast+Name%5D": state.lastName,
-        "fields%5BProject+Name%5D": state.projectName,
-        "fields%5BEmail%5D": state.email,
-        "fields%5BJob+Title%5D": state.title,
-        "fields%5BCompany%5D": state.company,
-        "fields%5BAdditional+Information%5D": state.info,
-        dolphin: "false",
-      }),
-    })
-      .then((response) => {
-        console.log(response);
-        setSubmited(true);
-      })
-      .catch((err) => {
-        console.error(err);
-      });
+    // fetch("https://webflow.com/api/v1/form/6273ba6b55681ae927cb4388", {
+    //   method: "POST",
+    //   headers: {
+    //     cookie:
+    //       "wf_exp_uniqueId=bbd782c7-52c8-42cc-a84d-1c891f876ad9; wf_logout=1672587886137; wfsession=B5dffEF3IdIKHWLTRggAaA.0BmnEeg21bcayv2PeiSZSEgpaV68RSfqWO2y033f_3EzOyUXpqrc4g9XyYTPkeVSCraPIC7i56lGxxqOGzdvDQ.1672587886137.86400000.8e1G1pyGxZ6jAmrz5nOYC213ZZqqQaKczct_ZjYQ3kQ",
+    //     Accept: "application/json, text/javascript, */*; q=0.01",
+    //     "Accept-Language": "en-US,en;q=0.9,zh-CN;q=0.8,zh;q=0.7",
+    //     Connection: "keep-alive",
+    //     "Content-Type": "application/x-www-form-urlencoded; charset=UTF-8",
+    //     Origin: "https://www.sec3.dev",
+    //     Referer: "https://www.sec3.dev/",
+    //     "Sec-Fetch-Dest": "empty",
+    //     "Sec-Fetch-Mode": "cors",
+    //     "Sec-Fetch-Site": "cross-site",
+    //     "User-Agent":
+    //       "Mozilla/5.0 (Linux; Android 6.0; Nexus 5 Build/MRA58N) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/108.0.0.0 Mobile Safari/537.36",
+    //     "sec-ch-ua":
+    //       '"Not?A_Brand";v="8", "Chromium";v="108", "Google Chrome";v="108"',
+    //     "sec-ch-ua-mobile": "?1",
+    //     "sec-ch-ua-platform": '"Android"',
+    //   },
+    //   body: JSON.stringify({
+    //     name: "Full+Audit+Request",
+    //     source: "https%3A%2F%2Fwww.sec3.dev%2Faudit%23audit",
+    //     test: "false",
+    //     "fields%5BFirst+Name%5D": state.firstName,
+    //     "fields%5BLast+Name%5D": state.lastName,
+    //     "fields%5BProject+Name%5D": state.projectName,
+    //     "fields%5BEmail%5D": state.email,
+    //     "fields%5BJob+Title%5D": state.title,
+    //     "fields%5BCompany%5D": state.company,
+    //     "fields%5BAdditional+Information%5D": state.info,
+    //     dolphin: "false",
+    //   }),
+    // })
+    //   .then((response) => {
+    //     console.log(response);
+    //     setSubmited(true);
+    //   })
+    //   .catch((err) => {
+    //     console.error(err);
+    //   });
   };
 
   return (
