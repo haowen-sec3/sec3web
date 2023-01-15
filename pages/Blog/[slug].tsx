@@ -118,7 +118,7 @@ const BlogDetail = ({ post, otherPosts }: any) => {
           <h6 className={styles["label"]}>Other Posts</h6>
           <div className={styles["list"]}>
             {otherPosts.map((post: any) => (
-              <div className={styles["list-item"]}>
+              <div key={post.node.title} className={styles["list-item"]}>
                 <div className={styles["title"]}>{post.node.title}</div>
                 <BtnWithArrow
                   text="Read"

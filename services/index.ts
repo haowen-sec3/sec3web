@@ -23,14 +23,6 @@ export const getPosts = async () => {
             createdAt
           }
         }
-        aggregate {
-          count
-        }
-        pageInfo {
-          hasNextPage
-          hasPreviousPage
-          pageSize
-        }
       }
     }
   `;
