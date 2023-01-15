@@ -48,6 +48,9 @@ const BlogDetail = ({ post, otherPosts }: any) => {
               h1: ({ children }) => (
                 <h1 className={styles["title"]}>{children}</h1>
               ),
+              h6: ({ children }) => (
+                <div className={styles["caption"]}>{children}</div>
+              ),
               p: ({ children }) => (
                 <p className={styles["paragraph"]}>{children}</p>
               ),
@@ -61,6 +64,7 @@ const BlogDetail = ({ post, otherPosts }: any) => {
                   {children}
                 </a>
               ),
+              img: ({ src, altText }) => <img src={src} alt={altText} />,
               blockquote: ({ children }) => (
                 <div className={styles["blockquote"]}>{children}</div>
               ),
@@ -70,7 +74,24 @@ const BlogDetail = ({ post, otherPosts }: any) => {
                   <code>{children}</code>
                 </pre>
               ),
-              img: ({ src, altText }) => <img src={src} alt={altText} />,
+              table: ({ children }) => (
+                <table className={styles["table"]}>{children}</table>
+              ),
+              table_head: ({ children }) => (
+                <thead className={styles["thead"]}>{children}</thead>
+              ),
+              table_header_cell: ({ children }) => (
+                <th className={styles["th"]}>{children}</th>
+              ),
+              table_body: ({ children }) => (
+                <tbody className={styles["tbody"]}>{children}</tbody>
+              ),
+              table_row: ({ children }) => (
+                <tr className={styles["tr"]}>{children}</tr>
+              ),
+              table_cell: ({ children }) => (
+                <td className={styles["td"]}>{children}</td>
+              ),
               class: ({ children, className }) => (
                 <div
                   className={`${
