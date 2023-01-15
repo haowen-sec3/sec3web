@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
+import { useRouter } from "next/router";
 import Link from "next/link";
 import Image from "next/image";
 import styles from "./header.module.scss";
@@ -6,6 +7,24 @@ import Sec3Logo from "../../assets/images/sec3-logo.svg";
 
 const Header = () => {
   const [expandNav, setExpandNavState] = useState(false);
+  const [path, setPath] = useState("/");
+
+  const router = useRouter();
+
+  useEffect(() => {
+    setPath(router.pathname);
+    console.log(router.pathname);
+  }, [router.pathname]);
+
+  const paths = {
+    home: "/",
+    terms: "/terms",
+    "privacy-policy": "/privacy-policy",
+    audit: "/audit",
+    "x-ray": "/x-ray",
+    watchtower: "/watchtower",
+    blog: "/blog",
+  };
 
   return (
     <div className={styles["header"]}>
@@ -15,16 +34,36 @@ const Header = () => {
         </Link>
 
         <nav role="navigation" className={styles["nav-menu"]}>
-          <Link href="/audit" className={styles["navlink"]}>
+          <Link
+            href="/audit"
+            className={`${styles["navlink"]} ${
+              path === paths["audit"] ? styles["selected"] : ""
+            }`}
+          >
             Launch Audit
           </Link>
-          <Link href="/x-ray" className={styles["navlink"]}>
+          <Link
+            href="/x-ray"
+            className={`${styles["navlink"]} ${
+              path === paths["x-ray"] ? styles["selected"] : ""
+            }`}
+          >
             X-ray
           </Link>
-          <Link href="/watchtower" className={styles["navlink"]}>
+          <Link
+            href="/watchtower"
+            className={`${styles["navlink"]} ${
+              path === paths["watchtower"] ? styles["selected"] : ""
+            }`}
+          >
             WatchTower
           </Link>
-          <Link href="/blog" className={styles["navlink"]}>
+          <Link
+            href="/blog"
+            className={`${styles["navlink"]} ${
+              path === paths["blog"] ? styles["selected"] : ""
+            }`}
+          >
             Blog
           </Link>
           <div className={styles["wrapper-navbar-buttom"]}>
@@ -77,16 +116,36 @@ const Header = () => {
             onClick={() => setExpandNavState(false)}
           >
             <nav className={styles["nav-menu"]}>
-              <Link href="/audit" className={styles["navlink"]}>
+              <Link
+                href="/audit"
+                className={`${styles["navlink"]} ${
+                  path === paths["audit"] ? styles["selected"] : ""
+                }`}
+              >
                 Launch Audit
               </Link>
-              <Link href="/x-ray" className={styles["navlink"]}>
+              <Link
+                href="/x-ray"
+                className={`${styles["navlink"]} ${
+                  path === paths["x-ray"] ? styles["selected"] : ""
+                }`}
+              >
                 X-ray
               </Link>
-              <Link href="/watchtower" className={styles["navlink"]}>
+              <Link
+                href="/watchtower"
+                className={`${styles["navlink"]} ${
+                  path === paths["watchtower"] ? styles["selected"] : ""
+                }`}
+              >
                 WatchTower
               </Link>
-              <Link href="/blog" className={styles["navlink"]}>
+              <Link
+                href="/blog"
+                className={`${styles["navlink"]} ${
+                  path === paths["blog"] ? styles["selected"] : ""
+                }`}
+              >
                 Blog
               </Link>
               <div className={styles["wrapper-navbar-buttom"]}>

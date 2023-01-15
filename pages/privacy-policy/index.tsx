@@ -60,7 +60,7 @@ function Privacy({ privacy }: any) {
             <div className={styles["privacy-policy-sticky"]}>
               <p>contents</p>
               {[...Array.from(new Set(contents))].map((content) => (
-                <div className={styles["policy-title"]}>
+                <div key={content} className={styles["policy-title"]}>
                   <a href={`#${content}`}>{content}</a>
                 </div>
               ))}

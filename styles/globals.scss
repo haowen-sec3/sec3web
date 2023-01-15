@@ -37,7 +37,8 @@
   h5,
   h6,
   p {
-    z-index: 2;
+    position: inherit;
+    z-index: 9;
   }
 
   .top-section {
@@ -231,7 +232,7 @@
   .blue-400 {
     margin-bottom: 10px;
     padding-bottom: 20px;
-    font-family: "Plusjakartasans", sans-serif;
+    font-family: "Plusjakartasans-bold", sans-serif;
     font-size: 2.5rem;
     font-weight: 500;
     color: #d0e6ff;
@@ -290,12 +291,24 @@
     margin-top: 2rem;
   }
 
+  .p-b-2 {
+    padding-bottom: 2rem;
+  }
+
   .p-t-4 {
     padding-top: 4rem;
   }
 
+  .p-b-4 {
+    padding-bottom: 4rem;
+  }
+
   .p-l-4 {
     padding-left: 4rem;
+  }
+
+  .p-b-6 {
+    padding-bottom: 6rem;
   }
 
   .grid-2 {

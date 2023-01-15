@@ -68,7 +68,7 @@ const WatchTower = () => {
         />
       </Container>
 
-      <Container>
+      <Container className={styles["description"]}>
         <h5 className="description">
           Ever wonder if someone is hacking your main-net protocols at this
           moment? WatchTower detects and alerts suspicious activity in real-time
@@ -102,7 +102,7 @@ const WatchTower = () => {
         </div>
       </Container>
 
-      <Container className="grid-2 p-t-4 relative">
+      <Container className="grid-2 p-t-4 p-b-6 relative">
         <Image
           className={styles["blur2-solution-3"]}
           src={BgShadow}
@@ -146,11 +146,11 @@ const WatchTower = () => {
       <div className="bg-footer">
         <Container className="flex-column flex-center">
           <div className="xs-small-width subtitle">
-            <h4 className="text-center">
+            <h4 className="text-center title">
               secure your main-net protocol today!
             </h4>
           </div>
-          <div className="m-t-2 flex-row">
+          <div className="m-t-2 p-b-2 flex-row">
             <div className="wrapper-navbar-buttom">
               <a
                 className="secondary-button"

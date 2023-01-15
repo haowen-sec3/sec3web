@@ -47,17 +47,17 @@ const XRay = () => {
               <g opacity="1" transform="matrix(1,0,0,1,0,0)">
                 <path
                   fill="rgb(255,0,0)"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
                 <path
                   strokeLinecap="butt"
                   strokeLinejoin="miter"
-                  fill-opacity="0"
-                  stroke-miterlimit="4"
+                  fillOpacity="0"
+                  strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
                   stroke-opacity="1"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
               </g>
@@ -70,17 +70,17 @@ const XRay = () => {
               <g opacity="1" transform="matrix(1,0,0,1,0,0)">
                 <path
                   fill="rgb(255,0,0)"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
                 <path
                   strokeLinecap="butt"
                   strokeLinejoin="miter"
-                  fill-opacity="0"
-                  stroke-miterlimit="4"
+                  fillOpacity="0"
+                  strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
                   stroke-opacity="1"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
               </g>
@@ -119,17 +119,17 @@ const XRay = () => {
               <g opacity="1" transform="matrix(1,0,0,1,0,0)">
                 <path
                   fill="rgb(255,0,0)"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
                 <path
                   strokeLinecap="butt"
                   strokeLinejoin="miter"
-                  fill-opacity="0"
-                  stroke-miterlimit="4"
+                  fillOpacity="0"
+                  strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
                   stroke-opacity="1"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
               </g>
@@ -142,17 +142,17 @@ const XRay = () => {
               <g opacity="1" transform="matrix(1,0,0,1,0,0)">
                 <path
                   fill="rgb(255,0,0)"
-                  fill-opacity="1"
+                  fillOpacity="1"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
                 <path
                   strokeLinecap="butt"
                   strokeLinejoin="miter"
-                  fill-opacity="0"
-                  stroke-miterlimit="4"
+                  fillOpacity="0"
+                  strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
                   stroke-opacity="1"
-                  stroke-width="2"
+                  strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
               </g>
@@ -350,14 +350,14 @@ const XRay = () => {
                       <path
                         d="M2.5 8H13.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
                       <path
                         d="M9 3.5L13.5 8L9 12.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
@@ -385,14 +385,14 @@ const XRay = () => {
                       <path
                         d="M2.5 8H13.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
                       <path
                         d="M9 3.5L13.5 8L9 12.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
@@ -420,14 +420,14 @@ const XRay = () => {
                       <path
                         d="M2.5 8H13.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
                       <path
                         d="M9 3.5L13.5 8L9 12.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
@@ -454,14 +454,14 @@ const XRay = () => {
                       <path
                         d="M2.5 8H13.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
                       <path
                         d="M9 3.5L13.5 8L9 12.5"
                         stroke="currentcolor"
-                        stroke-width="2"
+                        strokeWidth="2"
                         strokeLinecap="round"
                         strokeLinejoin="round"
                       ></path>
@@ -617,14 +617,14 @@ const XRay = () => {
                         <path
                           d="M2.5 8H13.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9 3.5L13.5 8L9 12.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
@@ -740,14 +740,14 @@ const XRay = () => {
                         <path
                           d="M2.5 8H13.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9 3.5L13.5 8L9 12.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
@@ -860,14 +860,14 @@ const XRay = () => {
                         <path
                           d="M2.5 8H13.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9 3.5L13.5 8L9 12.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
@@ -980,14 +980,14 @@ const XRay = () => {
                         <path
                           d="M2.5 8H13.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
                         <path
                           d="M9 3.5L13.5 8L9 12.5"
                           stroke="currentcolor"
-                          stroke-width="2"
+                          strokeWidth="2"
                           strokeLinecap="round"
                           strokeLinejoin="round"
                         ></path>
@@ -1072,9 +1072,11 @@ const XRay = () => {
 
         <Container className="flex-column flex-center">
           <div className="xs-small-width subtitle">
-            <h4 className="text-center">secure your Solana project today!</h4>
+            <h4 className="text-center title">
+              secure your Solana project today!
+            </h4>
           </div>
-          <div className="m-t-2 flex-row">
+          <div className="m-t-2 p-b-2 flex-row">
             <div className="wrapper-navbar-buttom">
               <a className="secondary-button" href="https://pro.sec3.dev/">
                 <div>Try X-Ray Free!</div>

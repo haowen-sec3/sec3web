@@ -95,7 +95,7 @@ export default function Home() {
         </Container>
       </div>
 
-      <Container className="relative">
+      <Container className={`relative ${styles["solutions"]}`}>
         <h5 className="blue-400">sec3 Solutions</h5>
         <Image
           className="blur2-solution"
@@ -166,7 +166,7 @@ export default function Home() {
       </Container>
 
       <div className="bg-footer">
-        <Container>
+        <Container className={styles["investors"]}>
           <h5 className="blue-400 text-center">Our Investors</h5>
           <Image
             src={MultiCapital}

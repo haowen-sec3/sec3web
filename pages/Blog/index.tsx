@@ -72,6 +72,7 @@ const Blog = ({ posts }: any) => {
 
           return (
             <PostCard
+              key={slug}
               slug={slug}
               title={title}
               excerpt={excerpt}

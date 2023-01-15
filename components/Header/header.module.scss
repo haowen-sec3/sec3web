@@ -8,7 +8,7 @@
   height: 60px;
   background-image: linear-gradient(
     180deg,
-    rgba(25, 30, 82, 0.6) 17%,
+    rgba(25, 30, 82, 0.9) 17%,
     rgba(23, 28, 80, 0)
   );
   z-index: 99;
@@ -61,6 +61,10 @@
       text-align: left;
       text-decoration: none;
       transition: all 200ms ease;
+
+      &.selected {
+        color: #d0e6ff;
+      }
 
       &:hover {
         color: #d0e6ff;
@@ -261,6 +265,10 @@
           color: #fff;
           font-size: 1rem;
           text-decoration: none;
+
+          &.selected {
+            color: #d0e6ff;
+          }
         }
 
         .wrapper-navbar-buttom {

@@ -76,6 +76,10 @@
     }
   }
 
+  .solutions {
+    padding: 4rem;
+  }
+
   .block-solution {
     position: relative;
     display: flex;
@@ -136,8 +140,6 @@
       }
     }
 
-    padding: 1rem;
-
     div {
       padding: 0;
     }
@@ -146,6 +148,11 @@
       font-size: 1.6rem;
     }
   }
+
+  .investors {
+    padding: 4rem 0 0;
+  }
+
   .multi-capital {
     max-width: 28rem;
     display: block;

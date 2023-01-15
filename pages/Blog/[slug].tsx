@@ -41,7 +41,7 @@ const BlogDetail = ({ post, otherPosts }: any) => {
       </div>
 
       <div className={styles["content"]}>
-        <Container>
+        <Container className={styles["container"]}>
           <RichText
             content={post.content.raw}
             renderers={{

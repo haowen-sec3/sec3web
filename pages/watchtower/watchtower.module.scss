@@ -21,7 +21,7 @@
       max-width: 60%;
     }
 
-    @media screen and (max-width: 471px) {
+    @media screen and (max-width: 479px) {
       max-width: 80%;
       top: -3rem;
     }
@@ -30,8 +30,8 @@
   .blur2-solution {
     max-width: 70%;
     position: absolute;
-    top: -10%;
-    left: 5%;
+    top: -25%;
+    left: 15%;
     right: 0%;
     bottom: 0%;
     width: 90%;
@@ -39,7 +39,6 @@
     max-width: 90vw;
     margin: 0 auto;
     opacity: 1;
-    mix-blend-mode: lighten;
   }
 
   .blur2-solution-2 {
@@ -48,7 +47,8 @@
     top: -50%;
     right: 0%;
     bottom: 0%;
-    max-width: 70%;
+    width: 120%;
+    // max-width: 70%;
     height: auto;
     margin: auto;
     opacity: 1;
@@ -61,7 +61,7 @@
       opacity: 1;
     }
 
-    @media screen and (max-width: 471px) {
+    @media screen and (max-width: 479px) {
       top: 0%;
       right: 0%;
       bottom: 0%;
@@ -71,10 +71,11 @@
   .blur2-solution-3 {
     position: absolute;
     left: 0%;
-    top: -50%;
+    top: -20%;
     right: 0%;
     bottom: 0%;
-    max-width: 70%;
+    width: 110%;
+    // max-width: 70%;
     height: auto;
     margin: auto;
     opacity: 1;
@@ -87,7 +88,7 @@
       opacity: 1;
     }
 
-    @media screen and (max-width: 471px) {
+    @media screen and (max-width: 479px) {
       top: 0%;
       right: 0%;
       bottom: 0%;
@@ -99,6 +100,8 @@
   }
 
   .card-shadow {
+    z-index: 9;
+
     h6 {
       text-align: center;
       font-family: "Plusjakartasans-bold", sans-serif;
