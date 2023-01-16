@@ -5,7 +5,7 @@ const graphqlAPI: string = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT || "";
 
 export const getPosts = async () => {
   const query = gql`
-    query PostCards($skip: Int!) {
+    query PostCards {
       postsConnection(orderBy: date_DESC, first: 5, skip: 0) {
         edges {
           node {
