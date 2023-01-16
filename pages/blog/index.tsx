@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import { getPosts } from "../../services";
@@ -18,8 +18,38 @@ type IPostCard = {
   date: string;
 };
 
-const Blog = ({ posts, pageInfo, totalCount }: any) => {
+const Blog = () => {
+  const [data, setData] = useState<any>(null);
+  const [error, setError] = useState<any>(null);
   const [activedPage, setActivedPage] = useState<number>(1);
+  const [skip, setSkip] = useState<number>(0);
+
+  useEffect(() => {
+    getPosts(0)
+      .then((postData) => {
+        setData(postData);
+      })
+      .catch((e) => setError(e));
+  }, []);
+
+  // set skipped value
+  useEffect(() => {
+    setSkip((activedPage - 1) * 5);
+  }, [activedPage]);
+
+  // fetch new page
+  useEffect(() => {
+    getPosts(skip)
+      .then((postData) => {
+        setData(postData);
+      })
+      .catch((e) => setError(e));
+    window.scroll({
+      top: 0,
+      left: 0,
+      behavior: "smooth",
+    });
+  }, [skip]);
 
   const selectPage = (page: number) => {
     setActivedPage(page);
@@ -32,6 +62,14 @@ const Blog = ({ posts, pageInfo, totalCount }: any) => {
   const nextPage = () => {
     setActivedPage(activedPage + 1);
   };
+
+  // if (error) {
+  //   return (
+  //     <div>
+  //       <h2>There was an error with the data fetching</h2>
+  //     </div>
+  //   );
+  // }
 
   return (
     <div className={styles["blogs"]}>
@@ -82,7 +120,7 @@ const Blog = ({ posts, pageInfo, totalCount }: any) => {
         <h1>Blogs</h1>
       </div>
       <Container className={styles["list"]}>
-        {posts.map((post: any) => {
+        {data?.edges?.map((post: any) => {
           const { slug, title, excerpt, featured, date } =
             post.node as IPostCard;
 
@@ -101,11 +139,11 @@ const Blog = ({ posts, pageInfo, totalCount }: any) => {
 
       <Pagination
         postsPerPage={5}
-        totalPosts={totalCount}
+        totalPosts={data?.aggregate?.count}
         activedPage={activedPage}
         paginate={selectPage}
-        hasNextPage={pageInfo.hasNextPage}
-        hasPreviousPage={pageInfo.hasPreviousPage}
+        hasNextPage={data?.pageInfo?.hasNextPage}
+        hasPreviousPage={data?.pageInfo?.hasPreviousPage}
         previousPage={previousPage}
         nextPage={nextPage}
       />
@@ -114,14 +152,3 @@ const Blog = ({ posts, pageInfo, totalCount }: any) => {
 };
 
 export default Blog;
-
-export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
-  return {
-    props: {
-      posts: posts.edges,
-      pageInfo: posts.pageInfo,
-      totalCount: posts.aggregate.count,
-    },
-  };
-}
