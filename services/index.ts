@@ -3,10 +3,10 @@ import { request, gql } from "graphql-request";
 
 const graphqlAPI: string = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT || "";
 
-export const getPosts = async (skip: number) => {
+export const getPosts = async () => {
   const query = gql`
     query PostCards($skip: Int!) {
-      postsConnection(orderBy: date_DESC, first: 5, skip: $skip) {
+      postsConnection(orderBy: date_DESC, first: 5, skip: 0) {
         edges {
           node {
             author {
@@ -35,7 +35,7 @@ export const getPosts = async (skip: number) => {
     }
   `;
 
-  const result = await request(graphqlAPI, query, { skip });
+  const result = await request(graphqlAPI, query);
 
   return result.postsConnection;
 };
