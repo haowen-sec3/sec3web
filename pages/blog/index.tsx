@@ -1,8 +1,10 @@
+import { useState } from "react";
 import Image from "next/image";
 import Head from "next/head";
 import { getPosts } from "../../services";
 import PostCard from "../../components/PostCard";
 import Container from "../../components/Container";
+import Pagination from "../../components/Pagination";
 import BgDetail from "../../assets/images/bg-blog-detail.png";
 import BgList from "../../assets/images/bg-blog-list.png";
 import styles from "./blogList.module.scss";
@@ -16,7 +18,21 @@ type IPostCard = {
   date: string;
 };
 
-const Blog = ({ posts }: any) => {
+const Blog = ({ posts, pageInfo, totalCount }: any) => {
+  const [activedPage, setActivedPage] = useState<number>(1);
+
+  const selectPage = (page: number) => {
+    setActivedPage(page);
+  };
+
+  const previousPage = () => {
+    setActivedPage(activedPage - 1);
+  };
+
+  const nextPage = () => {
+    setActivedPage(activedPage + 1);
+  };
+
   return (
     <div className={styles["blogs"]}>
       <Head>
@@ -82,6 +98,17 @@ const Blog = ({ posts }: any) => {
           );
         })}
       </Container>
+
+      <Pagination
+        postsPerPage={5}
+        totalPosts={totalCount}
+        activedPage={activedPage}
+        paginate={selectPage}
+        hasNextPage={pageInfo.hasNextPage}
+        hasPreviousPage={pageInfo.hasPreviousPage}
+        previousPage={previousPage}
+        nextPage={nextPage}
+      />
     </div>
   );
 };
@@ -89,8 +116,12 @@ const Blog = ({ posts }: any) => {
 export default Blog;
 
 export async function getStaticProps() {
-  const posts = (await getPosts()) || [];
+  const posts = (await getPosts(0)) || [];
   return {
-    props: { posts },
+    props: {
+      posts: posts.edges,
+      pageInfo: posts.pageInfo,
+      totalCount: posts.aggregate.count,
+    },
   };
 }

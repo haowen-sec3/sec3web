@@ -1,7 +1,7 @@
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import Image from "next/image";
-import { getPosts, getPostDetails, getOtherPosts } from "../../services";
+import { getPostPaths, getPostDetails, getOtherPosts } from "../../services";
 import Container from "../../components/Container";
 import BtnWithArrow from "../../components/BtnWithArrow";
 import { getFormatDate } from "../../utils";
@@ -136,6 +136,7 @@ const BlogDetail = ({ post, otherPosts }: any) => {
 
 export default BlogDetail;
 
+// Fetch data at build time
 export async function getStaticProps({ params }: any) {
   const post = await getPostDetails(params.slug);
   const otherPosts = (await getOtherPosts(params.slug)) || [];
@@ -145,8 +146,10 @@ export async function getStaticProps({ params }: any) {
   };
 }
 
+// Specify dynamic routes to pre-render pages based on data.
+// The HTML is generated at build time and will be reused on each request.
 export async function getStaticPaths() {
-  const posts = (await getPosts()) || [];
+  const posts = (await getPostPaths()) || [];
 
   return {
     paths: posts.map(({ node: { slug } }: any) => ({

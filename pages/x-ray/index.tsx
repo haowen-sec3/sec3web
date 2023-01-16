@@ -56,7 +56,7 @@ const XRay = () => {
                   fillOpacity="0"
                   strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
-                  stroke-opacity="1"
+                  strokeOpacity="1"
                   strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
@@ -79,7 +79,7 @@ const XRay = () => {
                   fillOpacity="0"
                   strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
-                  stroke-opacity="1"
+                  strokeOpacity="1"
                   strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
@@ -128,7 +128,7 @@ const XRay = () => {
                   fillOpacity="0"
                   strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
-                  stroke-opacity="1"
+                  strokeOpacity="1"
                   strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>
@@ -151,7 +151,7 @@ const XRay = () => {
                   fillOpacity="0"
                   strokeMiterlimit="4"
                   stroke="rgb(98,123,210)"
-                  stroke-opacity="1"
+                  strokeOpacity="1"
                   strokeWidth="2"
                   d=" M-11,1.125 C-11,1.125 10.75,1.125 10.75,1.125"
                 ></path>

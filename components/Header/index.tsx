@@ -13,7 +13,6 @@ const Header = () => {
 
   useEffect(() => {
     setPath(router.pathname);
-    console.log(router.pathname);
   }, [router.pathname]);
 
   const paths = {

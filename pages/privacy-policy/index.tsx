@@ -103,6 +103,7 @@ function Privacy({ privacy }: any) {
 
 export default Privacy;
 
+// Fetch data at build time
 export async function getStaticProps() {
   const privacy = await getPageContent("privacy-policy");
 

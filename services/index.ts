@@ -3,10 +3,10 @@ import { request, gql } from "graphql-request";
 
 const graphqlAPI: string = process.env.NEXT_PUBLIC_GRAPHCMS_ENDPOINT || "";
 
-export const getPosts = async () => {
+export const getPosts = async (skip: number) => {
   const query = gql`
-    query PostCards {
-      postsConnection(orderBy: date_DESC, first: 6) {
+    query PostCards($skip: Int!) {
+      postsConnection(orderBy: date_DESC, first: 5, skip: $skip) {
         edges {
           node {
             author {
@@ -23,13 +23,21 @@ export const getPosts = async () => {
             createdAt
           }
         }
+        aggregate {
+          count
+        }
+        pageInfo {
+          hasNextPage
+          hasPreviousPage
+          pageSize
+        }
       }
     }
   `;
 
-  const result = await request(graphqlAPI, query);
+  const result = await request(graphqlAPI, query, { skip });
 
-  return result.postsConnection.edges;
+  return result.postsConnection;
 };
 
 export const getPostDetails = async (slug: string) => {
@@ -56,6 +64,24 @@ export const getPostDetails = async (slug: string) => {
   const result = await request(graphqlAPI, query, { slug });
 
   return result.post;
+};
+
+export const getPostPaths = async () => {
+  const query = gql`
+    query PostPath {
+      postsConnection() {
+        edges {
+          node {
+            slug
+          }
+        }
+      }
+    }
+  `;
+
+  const result = await request(graphqlAPI, query);
+
+  return result.postsConnection.edges;
 };
 
 export const getOtherPosts = async (slug: string) => {

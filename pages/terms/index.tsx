@@ -109,6 +109,7 @@ function Terms({ terms }: any) {
 
 export default Terms;
 
+// Fetch data at build time
 export async function getStaticProps() {
   const terms = await getPageContent("terms");
 
