@@ -116,7 +116,7 @@ const Blog = ({ posts, pageInfo, totalCount }: any) => {
 export default Blog;
 
 export async function getStaticProps() {
-  const posts = (await getPosts(0)) || [];
+  const posts = (await getPosts()) || [];
   return {
     props: {
       posts: posts.edges,
