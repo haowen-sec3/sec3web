@@ -41,6 +41,27 @@
     mix-blend-mode: color-dodge;
   }
 
+  .loading,
+  .error {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+    line-height: 45px;
+
+    h2 {
+      max-width: 50%;
+    }
+
+    @media screen and (max-width: 991px) {
+      h2 {
+        max-width: 100%;
+      }
+    }
+  }
+
   .list {
     z-index: 10;
   }

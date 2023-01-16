@@ -21,6 +21,7 @@ type IPostCard = {
 const Blog = () => {
   const [data, setData] = useState<any>(null);
   const [error, setError] = useState<any>(null);
+  const [isLoading, setLoading] = useState<boolean>(false);
   const [activedPage, setActivedPage] = useState<number>(1);
   const [skip, setSkip] = useState<number>(0);
 
@@ -39,9 +40,11 @@ const Blog = () => {
 
   // fetch new page
   useEffect(() => {
+    setLoading(true);
     getPosts(skip)
       .then((postData) => {
         setData(postData);
+        setLoading(false);
       })
       .catch((e) => setError(e));
     window.scroll({
@@ -62,14 +65,6 @@ const Blog = () => {
   const nextPage = () => {
     setActivedPage(activedPage + 1);
   };
-
-  // if (error) {
-  //   return (
-  //     <div>
-  //       <h2>There was an error with the data fetching</h2>
-  //     </div>
-  //   );
-  // }
 
   return (
     <div className={styles["blogs"]}>
@@ -119,34 +114,46 @@ const Blog = () => {
       <div className={styles.title}>
         <h1>Blogs</h1>
       </div>
-      <Container className={styles["list"]}>
-        {data?.edges?.map((post: any) => {
-          const { slug, title, excerpt, featured, date } =
-            post.node as IPostCard;
+      {isLoading ? (
+        <div className={styles["loading"]}>
+          <h2>Loading more blogs...</h2>
+        </div>
+      ) : error ? (
+        <div className={styles["error"]}>
+          <h2>Oops! We met some issues, please try to refresh the page...</h2>
+        </div>
+      ) : (
+        <>
+          <Container className={styles["list"]}>
+            {data?.edges?.map((post: any) => {
+              const { slug, title, excerpt, featured, date } =
+                post.node as IPostCard;
 
-          return (
-            <PostCard
-              key={slug}
-              slug={slug}
-              title={title}
-              excerpt={excerpt}
-              featured={featured}
-              date={date}
-            />
-          );
-        })}
-      </Container>
+              return (
+                <PostCard
+                  key={slug}
+                  slug={slug}
+                  title={title}
+                  excerpt={excerpt}
+                  featured={featured}
+                  date={date}
+                />
+              );
+            })}
+          </Container>
 
-      <Pagination
-        postsPerPage={5}
-        totalPosts={data?.aggregate?.count}
-        activedPage={activedPage}
-        paginate={selectPage}
-        hasNextPage={data?.pageInfo?.hasNextPage}
-        hasPreviousPage={data?.pageInfo?.hasPreviousPage}
-        previousPage={previousPage}
-        nextPage={nextPage}
-      />
+          <Pagination
+            postsPerPage={5}
+            totalPosts={data?.aggregate?.count}
+            activedPage={activedPage}
+            paginate={selectPage}
+            hasNextPage={data?.pageInfo?.hasNextPage}
+            hasPreviousPage={data?.pageInfo?.hasPreviousPage}
+            previousPage={previousPage}
+            nextPage={nextPage}
+          />
+        </>
+      )}
     </div>
   );
 };
