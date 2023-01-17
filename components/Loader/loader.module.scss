@@ -1,0 +1,22 @@
+.loader {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  .circular {
+    margin-bottom: 2rem;
+    opacity: 0.5;
+  }
+
+  .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    text-align: center;
+    letter-spacing: 5px;
+    line-height: 45px;
+  }
+}

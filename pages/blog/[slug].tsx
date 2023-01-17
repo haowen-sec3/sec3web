@@ -1,6 +1,7 @@
 import { RichText } from "@graphcms/rich-text-react-renderer";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import { getPostPaths, getPostDetails, getOtherPosts } from "../../services";
 import Container from "../../components/Container";
 import BtnWithArrow from "../../components/BtnWithArrow";
@@ -8,8 +9,14 @@ import { getFormatDate } from "../../utils";
 import styles from "./blogDetail.module.scss";
 import BgBottom from "../../assets/images/bg-blog-bottom.png";
 import BgDetail from "../../assets/images/bg-blog-detail.png";
+import Loader from "../../components/Loader";
 
 const BlogDetail = ({ post, otherPosts }: any) => {
+  const router = useRouter();
+
+  if (router.isFallback) {
+    return <Loader />;
+  }
   return (
     <div className={styles["blog-detail"]}>
       <Head>
@@ -157,6 +164,6 @@ export async function getStaticPaths() {
         slug,
       },
     })),
-    fallback: false,
+    fallback: true,
   };
 }

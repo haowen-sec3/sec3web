@@ -21,10 +21,8 @@ const PostCard = (props: Props) => {
       </div>
       <div className={styles.title}>{props.title}</div>
       <div className={styles.excerpt}>{props.excerpt}</div>
-      <div className={styles.button}>
-        <Link className={styles["btn-text"]} href={`/blog/${props.slug}`}>
-          Read more
-        </Link>
+      <Link className={styles.button} href={`/blog/${props.slug}`}>
+        <div className={styles["btn-text"]}>Read more</div>
         <div className={styles["btn-icon"]}>
           <svg
             viewBox="0 0 16 16"
@@ -47,7 +45,7 @@ const PostCard = (props: Props) => {
             ></path>
           </svg>
         </div>
-      </div>
+      </Link>
     </div>
   );
 };
