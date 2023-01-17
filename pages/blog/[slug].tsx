@@ -55,6 +55,9 @@ const BlogDetail = ({ post, otherPosts }: any) => {
               h1: ({ children }) => (
                 <h1 className={styles["title"]}>{children}</h1>
               ),
+              h3: ({ children }) => (
+                <h1 className={styles["title"]}>{children}</h1>
+              ),
               h6: ({ children }) => (
                 <div className={styles["caption"]}>{children}</div>
               ),
