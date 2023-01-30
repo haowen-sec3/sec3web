@@ -1,6 +1,7 @@
 import React, { useEffect } from "react";
 import type { AppProps } from "next/app";
 import Router, { useRouter } from "next/router";
+import { Analytics } from "@vercel/analytics/react";
 import { Layout } from "../components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
@@ -27,6 +28,7 @@ export default function App({ Component, pageProps }: AppProps) {
       <Header />
       <Component {...pageProps} />
       <Footer />
+      <Analytics />
     </Layout>
   );
 }
