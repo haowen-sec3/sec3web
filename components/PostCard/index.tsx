@@ -21,7 +21,11 @@ const PostCard = (props: Props) => {
       </div>
       <div className={styles.title}>{props.title}</div>
       <div className={styles.excerpt}>{props.excerpt}</div>
-      <Link className={styles.button} href={`/blog/${props.slug}`}>
+      <Link
+        className={styles.button}
+        href={`/blog/${props.slug}`}
+        onClick={() => console.log(11)}
+      >
         <div className={styles["btn-text"]}>Read more</div>
         <div className={styles["btn-icon"]}>
           <svg
