@@ -22,13 +22,13 @@ import MeanLogo from "../assets/images/mean-logo-home.png";
 import HubbleLogo from "../assets/images/hubble-logo.svg";
 
 import BgShadow from "../assets/images/bg-shadow.png";
-// import MultiCapital from "../assets/images/multi-capital.png";
-// import AndSvg from "../assets/images/&.svg";
-// import Investor1 from "../assets/images/investor1.png";
-// import Investor2 from "../assets/images/investor2.png";
-// import Investor3 from "../assets/images/investor3.png";
-// import Investor4 from "../assets/images/investor4.png";
-// import Investor5 from "../assets/images/investor5.png";
+import MultiCapital from "../assets/images/multi-capital.png";
+import AndSvg from "../assets/images/&.svg";
+import Investor1 from "../assets/images/investor1.png";
+import Investor2 from "../assets/images/investor2.png";
+import Investor3 from "../assets/images/investor3.png";
+import Investor4 from "../assets/images/investor4.png";
+import Investor5 from "../assets/images/investor5.png";
 
 export default function Home() {
   return (
@@ -241,7 +241,7 @@ export default function Home() {
         </div>
       </Container>
 
-      {/* <div className="bg-footer">
+      <div className="bg-footer">
         <Container className={styles["investors"]}>
           <h5 className="blue-400 text-center">Our Investors</h5>
           <Image
@@ -259,49 +259,49 @@ export default function Home() {
           />
 
           <div className={styles["logo-wrapper-investor"]}>
-            <Link href="#">
+            {/* <div>
               <Image
                 src={Investor1}
                 loading="lazy"
                 alt="Investor1"
                 className={styles["investor-logo"]}
               />
-            </Link>
-            <Link href="#">
+            </div> */}
+            <div>
               <Image
                 src={Investor2}
                 loading="lazy"
                 alt="Investor2"
                 className={styles["investor-logo"]}
               />
-            </Link>
-            <Link href="#">
+            </div>
+            <div>
               <Image
                 src={Investor3}
                 loading="lazy"
                 alt="Investor3"
                 className={styles["investor-logo"]}
               />
-            </Link>
-            <Link href="#">
+            </div>
+            <div>
               <Image
                 src={Investor4}
                 loading="lazy"
                 alt="Investor4"
                 className={styles["investor-logo"]}
               />
-            </Link>
-            <Link href="#">
+            </div>
+            <div>
               <Image
                 src={Investor5}
                 loading="lazy"
                 alt="Investor5"
                 className={styles["investor-logo"]}
               />
-            </Link>
+            </div>
           </div>
         </Container>
-      </div> */}
+      </div>
     </div>
   );
 }
