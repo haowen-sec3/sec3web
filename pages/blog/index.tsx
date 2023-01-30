@@ -35,7 +35,7 @@ const Blog = () => {
 
   // set skipped value
   useEffect(() => {
-    setSkip((activedPage - 1) * 5);
+    setSkip((activedPage - 1) * 10);
   }, [activedPage]);
 
   // fetch new page
@@ -143,7 +143,7 @@ const Blog = () => {
           </Container>
 
           <Pagination
-            postsPerPage={5}
+            postsPerPage={10}
             totalPosts={data?.aggregate?.count}
             activedPage={activedPage}
             paginate={selectPage}

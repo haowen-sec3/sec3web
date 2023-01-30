@@ -53,10 +53,16 @@ const BlogDetail = ({ post, otherPosts }: any) => {
             content={post.content.raw}
             renderers={{
               h1: ({ children }) => (
-                <h1 className={styles["title"]}>{children}</h1>
+                <h1 className={styles["section-title"]}>{children}</h1>
+              ),
+              h2: ({ children }) => (
+                <h2 className={styles["subtitle"]}>{children}</h2>
               ),
               h3: ({ children }) => (
-                <h1 className={styles["title"]}>{children}</h1>
+                <h2 className={styles["subtitle"]}>{children}</h2>
+              ),
+              h4: ({ children }) => (
+                <h2 className={styles["subtitle"]}>{children}</h2>
               ),
               h6: ({ children }) => (
                 <div className={styles["caption"]}>{children}</div>
@@ -64,16 +70,24 @@ const BlogDetail = ({ post, otherPosts }: any) => {
               p: ({ children }) => (
                 <p className={styles["paragraph"]}>{children}</p>
               ),
-              a: ({ children, href }) => (
-                <a
-                  className={styles["link"]}
-                  href={href}
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  {children}
-                </a>
-              ),
+              a: ({ children, href }) => {
+                const isImageFromMedium =
+                  href?.endsWith(".png") && href?.includes("medium.com");
+                if (isImageFromMedium) {
+                  return <img src={href} />;
+                } else {
+                  return (
+                    <a
+                      className={styles["link"]}
+                      href={href}
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      {children}
+                    </a>
+                  );
+                }
+              },
               img: ({ src, altText }) => <img src={src} alt={altText} />,
               blockquote: ({ children }) => (
                 <div className={styles["blockquote"]}>{children}</div>

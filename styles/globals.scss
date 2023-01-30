@@ -36,8 +36,11 @@
   h4,
   h5,
   h6,
-  p {
+  p,
+  ul,
+  ol {
     position: inherit;
+    color: #fff;
     z-index: 9;
   }
 
@@ -289,6 +292,10 @@
 
   .m-t-2 {
     margin-top: 2rem;
+  }
+
+  .m-b-2 {
+    margin-bottom: 2rem;
   }
 
   .p-b-2 {

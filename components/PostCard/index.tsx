@@ -15,7 +15,7 @@ const PostCard = (props: Props) => {
     <div className={styles.postCard}>
       <div className={styles.top}>
         <span className={styles.date}>
-          {moment(props.date).format("MMM DD, YYYY")}
+          {moment(props.date).format("MMMM DD, YYYY")}
         </span>
         {props.featured && <span className={styles.featured}>★Featured★</span>}
       </div>

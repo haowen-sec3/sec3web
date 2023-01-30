@@ -43,6 +43,7 @@
         font-weight: 700;
         line-height: 1.5;
         text-align: center;
+        color: #fff;
       }
       .date {
         display: inline-block;
@@ -94,13 +95,21 @@
       }
     }
 
-    .title {
+    .section-title {
       margin-top: 60px;
       margin-bottom: 40px;
       font-family: "Plusjakartasans-bold", sans-serif;
-      font-size: 30px;
+      font-size: 32px;
       font-weight: 700;
       line-height: 36px;
+      color: #333;
+    }
+    .subtitle {
+      margin-top: 40px;
+      margin-bottom: 30px;
+      font-family: "Plusjakartasans-bold", sans-serif;
+      font-size: 26px;
+      font-weight: 700;
       color: #333;
     }
     .paragraph,
@@ -112,6 +121,11 @@
       font-size: 18px;
       line-height: 32px;
       font-weight: 400;
+      color: #333;
+
+      li {
+        margin-bottom: 8px;
+      }
 
       strong {
         font-family: "Plusjakartasans-bold", sans-serif;
@@ -129,6 +143,7 @@
           Times, serif;
         font-style: italic;
         word-wrap: break-word;
+        color: #333;
       }
       code {
         background-color: #f3f3f3;
@@ -145,6 +160,14 @@
         word-wrap: break-word;
       }
     }
+
+    ul,
+    ol {
+      @media screen and (max-width: 479px) {
+        font-size: 16px;
+      }
+    }
+
     .link {
       color: #3d5df1;
       word-wrap: break-word;
@@ -211,6 +234,11 @@
           vertical-align: inherit;
           font-weight: bold;
           text-align: -internal-center;
+          color: #ffffff;
+
+          p {
+            color: #ffffff;
+          }
         }
       }
     }
@@ -239,9 +267,13 @@
       margin: 0 auto;
       width: 80%;
       border: 1px solid silver;
+
+      @media screen and (max-width: 479px) {
+        width: 100%;
+      }
     }
     .caption {
-      font-size: 12px;
+      font-size: 14px;
       color: silver;
       text-align: center;
 
@@ -256,6 +288,10 @@
     overflow: hidden;
     padding-bottom: 8rem;
     background-color: #2d3589;
+
+    @media screen and (max-width: 767px) {
+      padding-bottom: 2rem;
+    }
 
     .bg-bottom {
       position: absolute;
@@ -285,6 +321,11 @@
       grid-row-gap: 1.5rem;
       grid-template-columns: 1fr 1fr 1fr;
       grid-template-rows: auto;
+
+      @media screen and (max-width: 767px) {
+        max-width: 25rem;
+        grid-template-columns: 1fr;
+      }
     }
 
     .list-item {
@@ -308,6 +349,10 @@
         line-height: 1.75rem;
         color: #fff;
         text-align: left;
+      }
+
+      @media screen and (max-width: 767px) {
+        display: block;
       }
     }
   }

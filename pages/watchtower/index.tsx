@@ -71,8 +71,9 @@ const WatchTower = () => {
       <Container className={styles["description"]}>
         <h5 className="description">
           Ever wonder if someone is hacking your main-net protocols at this
-          moment? WatchTower detects and alerts suspicious activity in real-time
-          to protect funds.
+          moment? WatchTower detects and alerts on-chain suspicious activity in
+          real time. Together with WatchTower CircuitBreaker stops and arrests
+          malicious transactions to keep funds safe.
         </h5>
       </Container>
 
@@ -87,7 +88,7 @@ const WatchTower = () => {
           detect, prevent, & stop security attacks in real-time
         </h4>
         <p className="text-center subtitle">
-          smart monitor for smart contracts
+          automated post-deployment security for smart contracts
         </p>
         <div className="grid-3">
           <div className={`card-shadow ${styles["card-shadow"]}`}>

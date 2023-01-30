@@ -21,6 +21,16 @@
       font-weight: 300;
       line-height: 2rem;
     }
+
+    @media screen and (max-width: 479px) {
+      h3 {
+        font-size: 3.5rem;
+      }
+
+      p {
+        font-size: 1.6rem;
+      }
+    }
   }
 
   .logo-wrapper {
@@ -33,9 +43,20 @@
     img {
       display: inline-block;
       width: auto;
+      max-height: 40px;
       height: 2.5rem;
       vertical-align: middle;
       object-fit: contain;
+      filter: grayscale(100%);
+    }
+
+    .svgLogo {
+      padding: 5px 0;
+      opacity: 0.55;
+    }
+
+    .half-opacity {
+      opacity: 0.57;
     }
 
     @media screen and (max-width: 991px) {
@@ -70,14 +91,54 @@
       text-align: center;
 
       img {
+        margin-top: 2rem;
         height: 2.5rem;
         text-align: left;
       }
     }
   }
 
+  .m-b-2 {
+    margin-bottom: 2rem;
+
+    @media screen and (max-width: 479px) {
+      margin-bottom: 0;
+    }
+  }
+
   .solutions {
-    padding: 4rem;
+    // padding: 4rem;
+
+    @media screen and (max-width: 479px) {
+      padding: 4rem 1rem;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-auto-columns: 1fr;
+      grid-column-gap: 3rem;
+      grid-row-gap: 3rem;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      grid-template-rows: auto;
+
+      div {
+        grid-column-start: span 1;
+        grid-column-end: span 1;
+        grid-row-start: span 1;
+        grid-row-end: span 1;
+      }
+
+      @media screen and (max-width: 991px) {
+        grid-row-gap: 5rem;
+        grid-template-columns: 1fr;
+      }
+      @media screen and (max-width: 767px) {
+        grid-row-gap: 0rem;
+      }
+      @media screen and (max-width: 479px) {
+        grid-row-gap: 2rem;
+      }
+    }
   }
 
   .block-solution {
@@ -138,6 +199,10 @@
       div {
         padding: 0;
       }
+    }
+
+    @media screen and (max-width: 479px) {
+      padding: 2.4rem 0rem 2.4rem;
     }
 
     div {

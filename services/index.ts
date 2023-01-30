@@ -7,7 +7,7 @@ export const graphqlAPI: string =
 export const getPosts = async (skip: number) => {
   const query = gql`
     query PostCards($skip: Int!) {
-      postsConnection(orderBy: date_DESC, first: 5, skip: $skip) {
+      postsConnection(orderBy: date_DESC, first: 10, skip: $skip) {
         edges {
           node {
             author {

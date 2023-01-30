@@ -154,6 +154,12 @@
       minmax(12rem, 25%);
     grid-template-rows: minmax(6rem, 8rem) minmax(6rem, 8rem);
 
+    div {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     img {
       display: flex;
       width: 9.6rem;
@@ -360,6 +366,7 @@
         width: 100%;
         min-height: 2.8125rem;
         padding: 0 1rem;
+        padding-left: 0;
         background-color: transparent;
         background-image: url("https://uploads-ssl.webflow.com/6273ba6b55681ae927cb4388/62c955f9c50496b03aabb39d_ArrowRight.svg");
         background-position: 85% 50%;
@@ -369,7 +376,6 @@
         font-size: 1.125rem;
         font-weight: 500;
         display: inline-block;
-        padding: 9px 15px;
         color: white;
         border: 0;
         line-height: inherit;

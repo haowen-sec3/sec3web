@@ -99,6 +99,10 @@
     @extend .flex-column;
   }
 
+  .description {
+    position: inherit;
+  }
+
   .card-shadow {
     z-index: 9;
 

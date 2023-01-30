@@ -23,7 +23,7 @@ export default function App({ Component, pageProps }: AppProps) {
 
   return (
     <Layout className="global" bg="no-bg">
-      <Banner />
+      {/* <Banner /> */}
       <Header />
       <Component {...pageProps} />
       <Footer />

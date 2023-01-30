@@ -8,18 +8,27 @@ import styles from "./home.module.scss";
 import HomeIllustration from "../assets/images/home-illustration.svg";
 import MetaplexLogo from "../assets/images/metaplex-logo.png";
 import StarAtlasLogo from "../assets/images/star-atlas-logo.png";
-import SaberLogo from "../assets/images/saber-logo.png";
 import JupitorLogo from "../assets/images/jupitor-logo.png";
 import ZetaLogo from "../assets/images/zeta-logo.png";
+
+import SquadsLogo from "../assets/images/squads-logo.svg";
+import DpraclLogo from "../assets/images/dpracl-logo.png";
+import UXDLogo from "../assets/images/uxd-logo.svg";
+import BETDEXLogo from "../assets/images/betdex-logo.png";
+
 import TulipLogo from "../assets/images/tulip-logo.png";
+import HedgeLogo from "../assets/images/hedge-logo.svg";
+import MeanLogo from "../assets/images/mean-logo-home.png";
+import HubbleLogo from "../assets/images/hubble-logo.svg";
+
 import BgShadow from "../assets/images/bg-shadow.png";
-import MultiCapital from "../assets/images/multi-capital.png";
-import AndSvg from "../assets/images/&.svg";
-import Investor1 from "../assets/images/investor1.png";
-import Investor2 from "../assets/images/investor2.png";
-import Investor3 from "../assets/images/investor3.png";
-import Investor4 from "../assets/images/investor4.png";
-import Investor5 from "../assets/images/investor5.png";
+// import MultiCapital from "../assets/images/multi-capital.png";
+// import AndSvg from "../assets/images/&.svg";
+// import Investor1 from "../assets/images/investor1.png";
+// import Investor2 from "../assets/images/investor2.png";
+// import Investor3 from "../assets/images/investor3.png";
+// import Investor4 from "../assets/images/investor4.png";
+// import Investor5 from "../assets/images/investor5.png";
 
 export default function Home() {
   return (
@@ -65,10 +74,10 @@ export default function Home() {
           <div className={styles["title-col"]}>
             <h3>End-to-End Web3 Security</h3>
             <p className="m-t-4">
-              sec3<sup>TM</sup> is a security research firm that prepares web3
-              protocols for millions of users, by building technology based
-              solutions for Web3 projects to ensure protocols stay safe as they
-              scale.
+              sec3<sup>TM</sup> -secure web3, is a security research firm that
+              prepares web3 protocols for millions of users, by providing
+              security launch audits and automated solutions for Web3 projects
+              to ensure protocols stay safe as they scale.
             </p>
           </div>
 
@@ -87,15 +96,60 @@ export default function Home() {
           <div className={styles["logo-wrapper"]}>
             <Image src={MetaplexLogo} loading="lazy" alt="metaplex-Logo" />
             <Image src={StarAtlasLogo} loading="lazy" alt="star-atlas-Logo" />
-            <Image src={SaberLogo} loading="lazy" alt="saber-Logo" />
             <Image src={JupitorLogo} loading="lazy" alt="jupitor-Logo" />
             <Image src={ZetaLogo} loading="lazy" alt="zeta-Logo" />
-            <Image src={TulipLogo} loading="lazy" alt="tulip-Logo" />
+          </div>
+          <div className={styles["logo-wrapper"]}>
+            <Image
+              src={SquadsLogo}
+              loading="lazy"
+              alt="squads-Logo"
+              className={styles["svgLogo"]}
+            />
+            <Image
+              src={DpraclLogo}
+              loading="lazy"
+              alt="dpracl-Logo"
+              className={styles["svgLogo"]}
+            />
+            <Image
+              src={UXDLogo}
+              loading="lazy"
+              alt="uxd-Logo"
+              className={styles["svgLogo"]}
+            />
+            <Image
+              src={BETDEXLogo}
+              loading="lazy"
+              alt="betdex-Logo"
+              className={styles["half-opacity"]}
+            />
+          </div>
+          <div className={`${styles["logo-wrapper"]} ${styles["m-b-2"]}}`}>
+            <Image
+              src={TulipLogo}
+              loading="lazy"
+              alt="tulip-Logo"
+              className={styles["half-opacity"]}
+            />
+            <Image
+              src={HedgeLogo}
+              loading="lazy"
+              alt="hedge-Logo"
+              className={styles["half-opacity"]}
+            />
+            <Image src={MeanLogo} loading="lazy" alt="mean-Logo" />
+            <Image
+              src={HubbleLogo}
+              loading="lazy"
+              alt="hubble-Logo"
+              className={styles["svgLogo"]}
+            />
           </div>
         </Container>
       </div>
 
-      <Container className={`relative ${styles["solutions"]}`}>
+      <Container className={`relative ${styles["solutions"]} m-b-2`}>
         <h5 className="blue-400">sec3 Solutions</h5>
         <Image
           className="blur2-solution"
@@ -104,7 +158,7 @@ export default function Home() {
           sizes="(max-width: 767px) 90vw, (max-width: 991px) 87vw, 90vw"
           alt="bg-shadow"
         />
-        <div className="grid-3">
+        <div className={styles["grid-3"]}>
           <div className={styles["block-solution"]}>
             <div>
               <div className={styles["number-block-solution"]}>
@@ -162,10 +216,32 @@ export default function Home() {
               className="m-t-2"
             />
           </div>
+
+          <div className={styles["block-solution"]}>
+            <div>
+              <div className={styles["number-block-solution"]}>
+                <IconBadge type="star" />
+                <h6>/</h6>
+                <h6>04</h6>
+              </div>
+              <div className={styles["text-block-solution"]}>
+                <h5>CircuitBreaker</h5>
+                <p>
+                  Stop malicious attacks in real-time, and ensure funds stay
+                  safe.
+                </p>
+              </div>
+            </div>
+            <BtnWithArrow
+              text="Learn more"
+              url="/watchtower"
+              className="m-t-2"
+            />
+          </div>
         </div>
       </Container>
 
-      <div className="bg-footer">
+      {/* <div className="bg-footer">
         <Container className={styles["investors"]}>
           <h5 className="blue-400 text-center">Our Investors</h5>
           <Image
@@ -225,7 +301,7 @@ export default function Home() {
             </Link>
           </div>
         </Container>
-      </div>
+      </div> */}
     </div>
   );
 }
