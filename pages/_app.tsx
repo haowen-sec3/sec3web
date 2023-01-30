@@ -5,7 +5,7 @@ import { Analytics } from "@vercel/analytics/react";
 import { Layout } from "../components";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
-import Banner from "../components/Banner";
+// import Banner from "../components/Banner";
 import "../styles/globals.css";
 import "../styles/globals.scss";
 

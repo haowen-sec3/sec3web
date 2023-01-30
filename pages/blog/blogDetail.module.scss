@@ -264,7 +264,7 @@
     }
     img {
       display: block;
-      margin: 0 auto;
+      margin: 2.5rem auto 0;
       width: 80%;
       border: 1px solid silver;
 
@@ -273,9 +273,13 @@
       }
     }
     .caption {
-      font-size: 14px;
+      font-size: 16px;
       color: silver;
       text-align: center;
+
+      code {
+        color: rgb(147, 146, 146);
+      }
 
       .link {
         color: silver;
