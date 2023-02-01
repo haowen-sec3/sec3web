@@ -28,7 +28,11 @@ const Header = () => {
   return (
     <div className={styles["header"]}>
       <div className={styles["container"]}>
-        <Link className={styles["brand"]} href="/">
+        <Link
+          className={styles["brand"]}
+          href="/"
+          onClick={() => setExpandNavState(false)}
+        >
           <Image src={Sec3Logo} alt="sec3-logo" loading="lazy" />
         </Link>
 
