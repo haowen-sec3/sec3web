@@ -452,4 +452,56 @@
     background-size: 100% 100%;
     background-repeat: no-repeat;
   }
+
+  .lottie-animation {
+    -webkit-backdrop-filter: blur(5px);
+    backdrop-filter: blur(5px);
+  }
+
+  .c1 {
+    fill: transparent;
+    stroke: #356eff;
+    stroke-width: 14;
+    stroke-dasharray: 264;
+    stroke-dashoffset: 264;
+    stroke-linecap: butt;
+    animation: stroke 1s steps(500) forwards;
+    // transform: translate(-5, -5) rotate(-90deg);
+  }
+  .c1-2 {
+    fill: transparent;
+    stroke: #d0e6ff;
+    stroke-width: 15;
+    stroke-dasharray: 264;
+    stroke-dashoffset: 264;
+    stroke-linecap: butt;
+    animation: stroke 1s steps(500) forwards;
+  }
+  .c2 {
+    fill: transparent;
+    stroke: #f2994a;
+    stroke-width: 14;
+    stroke-dasharray: 264;
+    stroke-dashoffset: 264;
+    stroke-linecap: butt;
+    animation: stroke 1s steps(500) forwards;
+    transform: translate(-5, -5) rotate(-90deg);
+  }
+  .c2-2 {
+    animation: appear 4s forwards;
+  }
+
+  @keyframes stroke {
+    100% {
+      stroke-dashoffset: 0;
+    }
+  }
+  @keyframes appear {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
 }

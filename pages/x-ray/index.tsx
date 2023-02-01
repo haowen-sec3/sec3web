@@ -336,8 +336,8 @@ const XRay = () => {
               <h6 className="blue-300-c">Pricing structure</h6>
             </div>
             <div className={styles["ems"]}>
-              <h6>Free</h6>
-              <p className={styles["regular"]}>$0</p>
+              <h6>Essential</h6>
+              <p className={styles["regular"]}>$99/Month</p>
               <div className={styles["wrapper-button"]}>
                 <Link href="https://pro.sec3.dev/" className={styles["link"]}>
                   <div className={styles["button"]}>
@@ -367,9 +367,11 @@ const XRay = () => {
               </div>
             </div>
             <div className={styles["ems"]}>
-              <h6>Build</h6>
+              <h6 className={styles["build"]}>
+                Build <span className={styles["tag"]}>Popular</span>
+              </h6>
               <p className={styles["regular"]}>
-                $19,999/Yea
+                $19,999/Year
                 <br />
                 $1,999/Month
               </p>
@@ -599,11 +601,11 @@ const XRay = () => {
                     })
                   }
                 >
-                  <h6>Free</h6>
+                  <h6>Essential</h6>
                   <>{expand[0] ? getMinusIcon() : getPlusIcon()}</>
                 </div>
                 <div className={styles["pricing"]}>
-                  <p>$0</p>
+                  <p>$99/Month</p>
                 </div>
                 <div className={styles["wrapper-button"]}>
                   <Link href="https://pro.sec3.dev/" className={styles["link"]}>

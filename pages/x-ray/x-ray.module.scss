@@ -446,6 +446,22 @@
       justify-content: space-between;
       font-size: 1.4vw;
 
+      .build {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+      }
+
+      .tag {
+        display: inline;
+        margin-left: 8px;
+        padding: 0.4rem 0.8rem;
+        border-radius: 10rem;
+        background-color: hsla(0, 0%, 100%, 0.18);
+        font-size: 1rem;
+        font-weight: 600;
+      }
+
       .regular {
         margin-top: 0;
         margin-bottom: 10px;
