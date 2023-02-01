@@ -74,16 +74,20 @@ const BlogDetail = ({ post, otherPosts }: any) => {
                 const isImageFromMedium =
                   href?.endsWith(".png") && href?.includes("medium.com");
                 if (isImageFromMedium) {
-                  return <img src={href} />;
-                } else {
                   return (
-                    <a
-                      className={styles["link"]}
-                      href={
+                    <img
+                      src={
                         href?.includes("/700/")
                           ? href.replace("/700/", "/1200/")
                           : href
                       }
+                    />
+                  );
+                } else {
+                  return (
+                    <a
+                      className={styles["link"]}
+                      href={href}
                       target="_blank"
                       rel="noreferrer"
                     >
