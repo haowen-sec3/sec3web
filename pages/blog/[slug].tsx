@@ -79,7 +79,11 @@ const BlogDetail = ({ post, otherPosts }: any) => {
                   return (
                     <a
                       className={styles["link"]}
-                      href={href}
+                      href={
+                        href?.includes("/700/")
+                          ? href.replace("/700/", "/1200/")
+                          : href
+                      }
                       target="_blank"
                       rel="noreferrer"
                     >
