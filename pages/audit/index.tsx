@@ -64,6 +64,7 @@ const Audit = () => {
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
+    // this is just a test call, the endpoint is from webflow, so there is a cross-site problem, but we will have our new endpoint soon to replace this one
     fetch("https://webflow.com/api/v1/form/6273ba6b55681ae927cb4388", {
       method: "POST",
       headers: {
